@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <hed><link rel="stylesheet" href="style.css">
+        <title>comments & reviews</title>
+    </hed>
+    <body>
+        <div class="comments-section">
+           <h2>User Comments & Reviews</h2>
+           <form id="commentForm">
+           <input type="text" id="username" placeholder="Your name" required>
+           <br>
+           <textarea id="usercomment" placeholder="Write your comment..." required></textarea>
+           <br>
+           <button type="submit">Post Comment</button>
+           </form>
+           <div id="commentsList"></div>
+        </div>
+           <script>
+               document.getElementById('commentForm').addEventListener('submit', function(e) {
+               e.preventDefault();
+               const name = document.getElementById('username').value;
+               const comment = document.getElementById('usercomment').value;
+               const commentsList = document.getElementById('commentsList');
+               const commentDiv = document.createElement('div');
+               commentDiv.className = 'single-comment';
+               commentDiv.innerHTML = `<strong>${name}</strong>: <span>${comment}</span>`;
+               commentsList.prepend(commentDiv);
+               this.reset();
+               });
+            </script>
+
+    </body>
+</html>
