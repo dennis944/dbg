@@ -23,8 +23,12 @@ img {
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: 20px;
-   margin: 0 auto;
-   width: 80%;
+   margin:  auto;
+   max-width: 100%;
+   width: 600px;
+   padding: 20px;
+   box-sizing: border-box;
+   overflow-x: hidden;
 
 
 }
@@ -68,6 +72,10 @@ h3 {
    background-color: white;
    margin-bottom: 20px;
    font-size: larger;
+}
+table {
+   max-width: 100%;
+   height: auto;
 }
 /* This is the CSS for the Dennis Mambo project */
 .dennis {
